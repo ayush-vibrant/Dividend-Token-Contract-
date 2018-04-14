@@ -6,9 +6,9 @@ A recurring challenge in smart contract development is the high gas cost of iter
 
 ## Possible Solution
 We can widely categorise Dividends state in 3 parts:
-    1. not yet credited
-    2. credited but not transferred
-    3. transferred
+1. not yet credited
+2. credited but not transferred
+3. transferred
 All new dividends owed to a particular account start in the “not yet credited” state. Once that account is part of a transfer or withdrawal, the contract code will compute the amount owed to that account and credit it, which moves the amount to the “credited but not transferred” status. Actual withdrawals move those credits to the final “transferred” state.
 
 
